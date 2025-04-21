@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vedant Jumle - AI Researcher</title>
+  <!-- SEO & Social Sharing -->
+  <meta name="description" content="Vedant Jumle's personal site - AI researcher specializing in deep learning, reinforcement learning, and probabilistic models.">
+  <meta property="og:title" content="Vedant Jumle - AI Researcher">
+  <meta property="og:description" content="Vedant Jumle's personal site - AI researcher specializing in deep learning, reinforcement learning, and probabilistic models.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vedant.ai/">
+  <meta property="og:image" content="https://vedant.ai/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vedant Jumle - AI Researcher">
+  <meta name="twitter:description" content="Vedant Jumle's personal site - AI researcher specializing in deep learning, reinforcement learning, and probabilistic models.">
+  <meta name="twitter:image" content="https://vedant.ai/og-image.png">
+  <!-- Privacy-focused analytics -->
+  <script defer data-domain="vedant.ai" src="https://plausible.io/js/plausible.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Figlet banner -->
+  <pre id="banner">
+              __          __      _            __
+ _  _____ ___/ /__ ____  / /_    (_)_ ____ _  / /__
+| |/ / -_) _  / _ `/ _ \/ __/   / / // /  ' \/ / -_)
+|___/\__/\_,_/\_,_/_//_/\__/ __/ /\_,_/_/_/_/_/\__/
+                            |___/
+  </pre>
+  <!-- Hamburger menu toggle and progressive enhancement navigation -->
+  <div id="menu-toggle" aria-label="Menu Toggle" role="button" tabindex="0">☰</div>
+  <nav id="menu" class="hidden" aria-label="Main navigation">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button id="toggle-list-view">List View</button></li>
+      <li><button id="toggle-theme">Toggle Theme</button></li>
+    </ul>
+  </nav>
+  <!-- Semantic fallback for no-JS SEO and accessibility -->
+  <noscript>
+    <div id="fallback">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </noscript>
+  <div id="terminal" role="region" aria-label="Terminal emulator">
+    <div id="output"></div>
+    <div id="input-line">
+      <span class="prompt">vedantjumle@darkmatter:~$</span>
+      <input type="text" id="command-input" autofocus autocomplete="off" aria-label="Command input">
+    </div>
+  </div>
+  <!-- List view container (hidden by default) -->
+  <div id="list-view" class="hidden" aria-hidden="true"></div>
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -7,46 +7,80 @@ var content = {
   },
   projects: [
     {
-      slug: 'ai-optimizer',
-      title: 'AI Optimizer',
-      desc: 'A meta-learning algorithm for black-box optimization.',
-      stack: ['TensorFlow', 'JAX', 'Python'],
-      repo: 'https://github.com/vedant/ai-optimizer',
-      demo: 'https://vedant.ai/ai-optimizer'
+      slug: 'buzztrends',
+      title: 'BuzzTrends',
+      desc: 'AI Copilot for moment marketing using LLMs and vector search to generate brand-specific social media posts.',
+      stack: ['LLM', 'Azure', 'Python', 'ChromaDB'],
+      repo: 'https://buzztrends.in/',
+      demo: 'https://buzztrends.in/'
     },
     {
-      slug: 'cool-vision-demo',
-      title: 'Cool Vision Demo',
-      desc: 'Real-time computer vision web application.',
-      stack: ['OpenCV', 'JavaScript', 'WebRTC'],
-      repo: 'https://github.com/vedant/cool-vision-demo',
-      demo: 'https://vedant.ai/vision-demo'
+      slug: 'diffusion-tf',
+      title: 'Diffusion in TensorFlow',
+      desc: 'Custom DDPM and class-conditioned diffusion models with Keras and TensorFlow.',
+      stack: ['TensorFlow', 'Keras', 'Deep Learning'],
+      repo: 'https://medium.com/@vedantjumle/image-generation-with-diffusion-models-using-keras-and-tensorflow-9f60aae72ac',
+      demo: 'https://medium.com/@vedantjumle/class-conditioned-diffusion-models-using-keras-and-tensorflow-9997fa6d958c'
+    },
+    {
+      slug: 'mamba-tf',
+      title: 'Mamba in TensorFlow',
+      desc: 'Custom implementation of Mamba architecture with theory and TensorFlow/Keras code.',
+      stack: ['TensorFlow', 'Keras', 'Mamba'],
+      repo: 'https://medium.com/towards-data-science/mamba-ssm-theory-and-implementation-in-keras-and-tensorflow-32d6d4b32546',
+      demo: ''
+    },
+    {
+      slug: 'genie',
+      title: 'Genie: Generative Models in Flask',
+      desc: 'SRGAN, DCGAN, and Neural Style Transfer models deployed via Flask.',
+      stack: ['TensorFlow', 'Flask', 'Python'],
+      repo: 'https://github.com/maxDeCoder/gen_ML_sem_4/',
+      demo: ''
+    },
+    {
+      slug: 'twitter-disaster-watcher',
+      title: 'Twitter Disaster Watcher',
+      desc: 'Pipeline to extract disaster-related data from tweets using verifier and custom NER models.',
+      stack: ['Python', 'NLP', 'Twitter API'],
+      repo: 'https://github.com/AkhileshManda/Hacknado',
+      demo: ''
     }
   ],
   research: [
     {
-      slug: 'deep-rl-paper',
-      title: 'Deep RL for Games',
-      desc: 'Deep reinforcement learning methods for sample-efficient gameplay.',
-      link: 'https://doi.org/10.1234/deeprl'
+      slug: 'tcpd-ias',
+      title: 'Bureaucrats of India - TCPD–IAS',
+      desc: 'Dataset on officers of the Indian Administrative Service (IAS).',
+      link: 'https://tcpd.ashoka.edu.in/bureaucrats-of-india/'
+    },
+    {
+      slug: 'twitter-journalism-global-south',
+      title: 'Decoding the Star System: Twitter and Journalism in the Global South',
+      desc: 'Published paper analyzing Twitter’s impact on journalism.',
+      link: 'https://onlinelibrary.wiley.com/doi/abs/10.1111/1758-5899.13252'
+    }
+  ],
+  blog: [
+    {
+      slug: 'diffusion-models',
+      title: 'Image generation with diffusion models using Keras and TensorFlow',
+      link: 'https://medium.com/@vedantjumle/image-generation-with-diffusion-models-using-keras-and-tensorflow-9f60aae72ac'
+    },
+    {
+      slug: 'class-conditioned-diffusion',
+      title: 'Class-conditioned diffusion models using Keras and TensorFlow',
+      link: 'https://medium.com/@vedantjumle/class-conditioned-diffusion-models-using-keras-and-tensorflow-9997fa6d958c'
+    },
+    {
+      slug: 'mamba-tutorial',
+      title: 'Mamba: SSM, Theory, and Implementation in Keras and TensorFlow',
+      link: 'https://towardsdatascience.com/mamba-ssm-theory-and-implementation-in-keras-and-tensorflow-32d6d4b32546'
     }
   ],
   contact: {
     email: 'vedantjumle@gmail.com',
-    github: 'https://github.com/vedantjumle',
+    github: 'https://github.com/vedant-jumle',
     linkedin: 'https://www.linkedin.com/in/vedantjumle'
-  },
-  // Blog entries (external links)
-  blog: [
-    {
-      slug: 'medium',
-      title: 'Mamba: SSM, Theory, and Implementation in Keras and TensorFlow',
-      link: 'https://towardsdatascience.com/mamba-ssm-theory-and-implementation-in-keras-and-tensorflow-32d6d4b32546/'
-    },
-    {
-      slug: 'blog',
-      title: 'Image generation with diffusion models using Keras and TensorFlow',
-      link: 'https://towardsdatascience.com/image-generation-with-diffusion-models-using-keras-and-tensorflow-9f60aae72ac/'
-    }
-  ]
+  }
 };

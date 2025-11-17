@@ -3,9 +3,25 @@ var content = {
   about: 'Hi, I\u2019m Vedant Jumle. I am an AI researcher with interests in deep learning, reinforcement learning, and probabilistic models. Welcome to my terminal-style personal website!',
   cv: {
     description: 'Download my CV',
-    link: 'cv.pdf'
+    link: 'https://drive.google.com/file/d/10a601FPWkfytt2RjeRe9CagkyfwNl4Gm/view'
   },
   projects: [
+    {
+      slug: 'reinforcement-learning-101',
+      title: 'Reinforcement Learning 101 (Active Repo)',
+      desc: 'Comprehensive guide to reinforcement learning concepts and algorithms with code examples.',
+      stack: ['Torch', 'Python', 'RL'],
+      repo: 'https://github.com/vedant-jumle/reinforcement-learning-101',
+      demo: 'https://github.com/vedant-jumle/reinforcement-learning-101'
+    },
+    {
+      slug: 'cosAE',
+      title: 'CosAE: Convolutional Harmonic Autoencoder',
+      desc: 'PyTorch implementation of the Convolutional Harmonic Autoencoder (CosAE)',
+      stack: ['Torch', 'Python'],
+      repo: 'https://github.com/vedant-jumle/CosAE',
+      demo: 'https://github.com/vedant-jumle/CosAE'
+    },
     {
       slug: 'buzztrends',
       title: 'BuzzTrends',
@@ -62,6 +78,11 @@ var content = {
     }
   ],
   blog: [
+    {
+      slug: 'rl-with-policy-gradients',
+      title: 'Deep Reinforcement Learning: 0 to 100',
+      link: 'https://towardsdatascience.com/deep-reinforcement-learning-for-dummies/'
+    },
     {
       slug: 'diffusion-models',
       title: 'Image generation with diffusion models using Keras and TensorFlow',

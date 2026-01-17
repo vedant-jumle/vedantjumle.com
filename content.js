@@ -79,6 +79,11 @@ var content = {
   ],
   blog: [
     {
+      slug: 'rl-with-actor-critic-methods',
+      title: 'Deep Reinforcement Learning: The Actor-Critic Method',
+      link: 'https://towardsdatascience.com/deep-reinforcement-learning-the-actor-critic-method/'
+    },
+    {
       slug: 'rl-with-policy-gradients',
       title: 'Deep Reinforcement Learning: 0 to 100',
       link: 'https://towardsdatascience.com/deep-reinforcement-learning-for-dummies/'

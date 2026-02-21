@@ -47,6 +47,14 @@ var content = {
       demo: ''
     },
     {
+      slug: 'image-stylization',
+      title: 'Image Stylization (SwinT-SRGAN with RoPE-2D)',
+      desc: 'Hybrid CNN+Transformer super-resolution using Swin Transformer with 2D Rotary Position Embeddings (RoPE-2D) for variable-size inference. Train on one resolution, infer on any.',
+      stack: ['PyTorch', 'Swin Transformer', 'GAN', 'Python'],
+      repo: 'https://github.com/vedant-jumle/Image-Stylization',
+      demo: 'https://github.com/vedant-jumle/Image-Stylization'
+    },
+    {
       slug: 'genie',
       title: 'Genie: Generative Models in Flask',
       desc: 'SRGAN, DCGAN, and Neural Style Transfer models deployed via Flask.',

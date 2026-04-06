@@ -7,6 +7,14 @@ var content = {
   },
   projects: [
     {
+      slug: 'cross-script-phonetic-retrieval',
+      title: 'Cross-Script Phonetic Name Retrieval via Byte-Level Contrastive Embeddings',
+      desc: 'Byte-level transformer encoder trained from scratch to match person names across writing systems (Arabic, Russian, Chinese, Hebrew, etc.) without any tokenizer or pretrained backbone. 0.775 MRR, 10× reduction in script gap. TU Delft IR course project.',
+      stack: ['PyTorch', 'FAISS', 'Contrastive Learning', 'IR', 'NLP', 'Python'],
+      repo: 'https://github.com/vedant-jumle/cross-language-phonetic-text-alignment',
+      demo: 'https://github.com/vedant-jumle/cross-language-phonetic-text-alignment'
+    },
+    {
       slug: 'reinforcement-learning-101',
       title: 'Reinforcement Learning 101 (Active Repo)',
       desc: 'Comprehensive guide to reinforcement learning concepts and algorithms with code examples.',

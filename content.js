@@ -95,6 +95,11 @@ var content = {
   ],
   blog: [
     {
+      slug: 'bytes-speak-all-languages-cross-script-name-retrieval-via-contrastive-learning/',
+      title: 'Bytes Speak All Languages: Cross-Script Name Retrieval via Contrastive Learning',
+      link: 'https://towardsdatascience.com/bytes-speak-all-languages-cross-script-name-retrieval-via-contrastive-learning/'
+    },
+    {
       slug: 'rl-with-actor-critic-methods',
       title: 'Deep Reinforcement Learning: The Actor-Critic Method',
       link: 'https://towardsdatascience.com/deep-reinforcement-learning-the-actor-critic-method/'

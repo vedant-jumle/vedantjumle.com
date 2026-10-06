@@ -81,6 +81,12 @@ var content = {
   ],
   research: [
     {
+      slug: 'seahorse',
+      title: 'Seahorse: Memories as Injected States in a Frozen Language Model',
+      desc: 'Working paper, thesis research in progress. A training-free activation memory for frozen LLMs: what a user discloses is stored as a residual-stream shift and re-injected only when the conversation calls for it, with notes on how the results bear on concept injection and introspection (Lindsey, 2026).',
+      link: 'seahorse/'
+    },
+    {
       slug: 'tcpd-ias',
       title: 'Bureaucrats of India - TCPD–IAS',
       desc: 'Dataset on officers of the Indian Administrative Service (IAS).',

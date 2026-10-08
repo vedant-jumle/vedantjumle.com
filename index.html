@@ -233,6 +233,7 @@
     <h1>Vedant Jumle — AI Researcher</h1>
     <p>Deep learning · Reinforcement learning · Probabilistic models</p>
     <ul style="list-style:none;padding:0;margin-top:12px">
+      <li><a href="seahorse/" style="color:#0f0">New: Seahorse, memories as injected states in a frozen LLM (working paper)</a></li>
       <li><a href="https://github.com/vedant-jumle" style="color:#0f0">GitHub ↗</a></li>
       <li><a href="https://www.linkedin.com/in/vedantjumle" style="color:#0f0">LinkedIn ↗</a></li>
       <li><a href="mailto:vedantjumle@gmail.com" style="color:#0f0">Email ↗</a></li>
@@ -336,6 +337,7 @@
       </div>
       <div class="vp-divider"></div>
       <div class="vp-desc">${esc(content.about)}</div>
+      <div class="vp-meta"><span class="meta-k" style="color:var(--c-res)">new</span><span class="meta-v"><a href="seahorse/">Seahorse: memories as injected states in a frozen LLM ↗</a></span></div>
       <div class="vp-links">
         <a class="vp-link" href="${c.github}"   target="_blank" rel="noopener">github ↗</a>
         <a class="vp-link" href="${c.linkedin}" target="_blank" rel="noopener">linkedin ↗</a>
@@ -657,6 +659,8 @@
    ██║   ╚█████╔╝
    ╚═╝    ╚════╝`;
 
+  const FEATURE_LINE = `<span style="color:var(--c-res)">new</span>  <a href="seahorse/" style="color:var(--text);text-decoration:none;border-bottom:1px solid var(--c-res)">seahorse: memories as injected states ↗</a>`;
+
   const BOOT_LINES = [
     [`BIOS v2.6.1 ${DOTS(33)} <span class="ok">[OK]</span>`,           'dim', 0],
     [`Loading vedant.core ${DOTS(27)} <span class="ok">[OK]</span>`,    'dim', 200],
@@ -694,6 +698,7 @@
       addLine(``, '');
       const h = addLine(`Type <span style="color:var(--prompt)">help</span> for commands.`, 'dim');
       animLine(h);
+      animLine(addLine(FEATURE_LINE, ''));
       const s = addLine(`<span class="sep">${'─'.repeat(44)}</span>`, '');
       animLine(s);
       scrollLeft();
@@ -720,6 +725,7 @@
     addLine(`<span style="font-size:14px;font-weight:500;color:rgba(255,255,255,0.88);letter-spacing:.06em">vedant jumle</span>  <span style="color:var(--dim);font-size:11px">— AI researcher</span>`, '');
     addLine(``, '');
     addLine(`Type <span style="color:var(--prompt)">help</span> for commands.`, 'dim');
+    addLine(FEATURE_LINE, '');
     addLine(`<span class="sep">${'─'.repeat(44)}</span>`, '');
     bootDone = true;
     inputWrap.style.opacity = '1';

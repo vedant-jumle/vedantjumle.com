@@ -82,8 +82,8 @@ var content = {
   research: [
     {
       slug: 'seahorse',
-      title: 'Seahorse: Memories as Injected States in a Frozen Language Model',
-      desc: 'Working paper, independent project in progress. A training-free activation memory for frozen LLMs: what a user discloses is stored as a residual-stream shift and re-injected only when the conversation calls for it, with notes on how the results bear on concept injection and introspection (Lindsey, 2026).',
+      title: 'Seahorse: A Memory for a Frozen Language Model',
+      desc: 'Independent project in progress. Can a frozen LLM remember across sessions? A vector pushed into its activations carries leanings but not facts; a stored two-position slice of its own attention memory carries facts, and breaks in specific ways. Paper 1: "What Survives When Activation Steering Is Used as Memory" (arXiv:2610.14958, https://arxiv.org/abs/2610.14958).',
       link: 'seahorse/'
     },
     {

@@ -4,41 +4,31 @@ Guidance for Claude Code when working in this repository.
 
 ## Project
 
-Static personal website for Vedant Jumle, AI researcher. Domain vedantjumle.com (via `CNAME`), hosted on GitHub Pages from `main`. No build step, no framework, no dependencies besides Google Fonts and Plausible analytics.
+Personal website for Vedant Jumle, AI researcher. Domain vedantjumle.com, hosted on GitHub Pages with **build type "GitHub Actions"** (not branch deploy). Every push to `main` runs `.github/workflows/pages.yml`, which runs `python build.py` and deploys `_site/`.
 
 ## Files
 
-- [index.html](index.html) — the home page. All content (bio, research, writing, projects) is written directly in the HTML; CSS and the small JS are inline. Edit this file to update content.
-- [seahorse/](seahorse/) — Seahorse project page plus explainers in `binding/`, `subject-position/`, `automatic-selection/`. Each is a standalone HTML page.
-- [photo.jpg](photo.jpg), [og-image.png](og-image.png), [cv.pdf](cv.pdf) — assets. The CV link on the home page currently points to Google Drive, not `cv.pdf`.
-- [sitemap.xml](sitemap.xml) — list real page URLs only (no `#hash` URLs).
+- [content.yml](content.yml) — **all homepage content** (site meta, name, tagline, links, about paragraphs, featured Seahorse card, research, writing, projects, contact). Content changes go here, not in HTML.
+- [templates/index.html.j2](templates/index.html.j2) — Jinja2 template with all CSS and the small inline JS (theme toggle, legacy hash routing). Design changes go here.
+- [build.py](build.py) — loads and validates `content.yml` (required fields, unique ids, reserved section ids), renders the template with autoescape, copies static files into `_site/`. Exits non-zero with readable messages on problems.
+- [seahorse/](seahorse/) — Seahorse project page plus explainers (`binding/`, `subject-position/`, `automatic-selection/`). Standalone hand-written HTML, copied as-is.
+- `photo.jpg`, `og-image.png`, `cv.pdf`, `CNAME`, `sitemap.xml` — copied as-is. Anything new that must be published has to be added to `STATIC` in `build.py`.
+- There is **no `index.html` in the repo root**; it's generated into `_site/` (git-ignored).
 
 ## Design system
 
-The home page and Seahorse pages share one look:
-- Fonts: Source Serif 4 (headings, lede), IBM Plex Sans (body), Fira Code (labels/meta).
-- Colour tokens on `:root` (`--bg`, `--ink`, `--accent`, `--link`, …) with dark-mode overrides via `prefers-color-scheme` and `[data-theme]`.
-- The theme toggle stores the choice in `localStorage` under `seahorse-theme` on every page, so the preference carries across the site.
+Home and Seahorse pages share one look: Source Serif 4 (headings), IBM Plex Sans (body), Fira Code (labels). Colour tokens on `:root` with dark mode via `prefers-color-scheme` and `[data-theme]`. The theme toggle uses the `localStorage` key `seahorse-theme` on every page.
 
 ## URL compatibility (keep working)
 
-The old terminal site used hash links like `#about`, `#cv`, `#contact`, `#projects/<slug>`, `#research/<slug>`, `#blog/<slug>`. These must keep working:
-- Every section and every list item has an `id` equal to its old slug (e.g. `id="buzztrends"`, `id="seahorse"`).
-- A small script in `index.html` maps `#section/slug` (and trailing slashes) to the element with id `slug`, scrolls to it and briefly highlights it.
-- When adding an item, give it a stable `id`; never rename existing ids.
+The old terminal site used links like `#about`, `#cv`, `#contact`, `#projects/<slug>`, `#research/<slug>`, `#blog/<slug>`.
+- Every item in `content.yml` has an `id` equal to its old slug; a script in the template maps `#section/slug` to the element with that id.
+- Never rename existing ids. New items need a unique id.
 - Real paths (`/seahorse/...`, `/photo.jpg`, `/og-image.png`, `/cv.pdf`) must not move.
-
-## Adding content
-
-- Research / project / writing item: copy an existing `<li class="entry" id="...">` block in the matching section of `index.html`.
-- New Seahorse explainer: add a folder under `seahorse/`, link it from `seahorse/index.html` and the "Explainers" list on the home page, and add it to `sitemap.xml`.
 
 ## Testing
 
-`python3 -m http.server` in the repo root, then check:
-1. Light and dark themes, and the toggle.
-2. Phone width (~390px): no horizontal scroll.
-3. Legacy links: `/#projects/buzztrends`, `/#research/seahorse`, `/#about`, `/#cv`.
-4. Links from the Seahorse pages back to `/`.
-
-Push to `main` to deploy.
+```bash
+python3 build.py && python3 -m http.server -d _site
+```
+Check light and dark themes, phone width (~390px, no horizontal scroll), and legacy links such as `/#projects/buzztrends`, `/#research/seahorse`, `/#cv`.

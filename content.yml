@@ -1,0 +1,242 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Content for vedantjumle.com
+#
+# Edit this file, then push to main. GitHub Actions rebuilds and deploys the
+# site in about a minute. If something in here is wrong (a missing title, a
+# duplicate id), the build fails, you get an email from GitHub, and the live
+# site stays on the last good version.
+#
+# Preview locally:   python3 build.py && python3 -m http.server -d _site
+#
+# Rules
+#   • Every `id` must be unique. Use lowercase-words-with-hyphens.
+#   • Never rename an existing `id`: old shared links like
+#     vedantjumle.com/#projects/buzztrends point at them.
+#   • Items appear on the page in the order they are listed here.
+#   • Text is plain text. Quote a value ("...") if it contains a colon
+#     followed by a space, or starts with a special character like * & [ {.
+# ─────────────────────────────────────────────────────────────────────────────
+
+site:
+  title: Vedant Jumle · AI Researcher
+  description: Vedant Jumle is an AI researcher working on memory and interpretability in language models, with past work in deep reinforcement learning and generative models.
+  share_description: "AI researcher working on memory and interpretability in language models. Currently: Seahorse, a memory for a frozen language model."
+  url: https://vedantjumle.com/
+
+name: Vedant Jumle
+tagline: AI researcher working on memory and interpretability in language models.
+photo: photo.jpg
+
+# Row of links under your name. `id` is optional (the CV link keeps id "cv").
+links:
+  - label: github
+    url: https://github.com/vedant-jumle
+  - label: linkedin
+    url: https://www.linkedin.com/in/vedantjumle
+  - label: cv
+    url: https://drive.google.com/file/d/10a601FPWkfytt2RjeRe9CagkyfwNl4Gm/view
+    id: cv
+  - label: vedantjumle@gmail.com
+    url: mailto:vedantjumle@gmail.com
+
+# One entry per paragraph.
+about:
+  - I study how language models store and use information. My current project, Seahorse, asks whether a frozen model can remember what you told it in an earlier conversation, and what breaks when it tries.
+  - I've also worked on deep reinforcement learning, diffusion and state-space models, and I write long-form tutorials on them for Towards Data Science.
+
+# The highlighted card at the top of Research.
+featured:
+  id: seahorse
+  kicker: Current · independent project
+  title: "Seahorse: a memory for a frozen language model"
+  url: seahorse/
+  summary: A vector pushed into a model's activations carries leanings, but not facts. A stored two-position slice of its own attention memory carries facts, and breaks in specific ways.
+  paper:
+    label: Paper 1
+    title: What Survives When Activation Steering Is Used as Memory
+    ref: arXiv:2610.14958
+  buttons:
+    - label: Project page
+      url: seahorse/
+      primary: true
+    - label: Paper
+      url: https://arxiv.org/abs/2610.14958
+      external: true
+    - label: Code
+      url: https://github.com/vedant-jumle/Seahorse
+      external: true
+  explainers:
+    - title: Binding across positions
+      url: seahorse/binding/
+    - title: The subject-position test
+      url: seahorse/subject-position/
+    - title: Automatic slice selection
+      url: seahorse/automatic-selection/
+
+# Papers and datasets, listed under the featured card.
+research:
+  - id: climate-adaptation-heritage-retrieval
+    title: Retrieving Climate Change Adaptation Concepts from World Heritage Management Plans in the Netherlands
+    url: https://openreview.net/forum?id=qGI1qus1Di
+    meta: ClimateNLP @ EMNLP 2026 · workshop paper
+    desc: A retrieval benchmark built from expert-labelled passages in the management plans of 11 Dutch World Heritage sites. Compares BM25, a bi-encoder, a dense retriever with reranker, and a cross-encoder reranker, which performs best. With Orhan Agaoglu, Laurens Mol, Edgar Salas Gironés and Nan Bai.
+
+  - id: twitter-journalism-global-south
+    title: "Decoding the Star System: Twitter and Journalism in the Global South"
+    url: https://onlinelibrary.wiley.com/doi/abs/10.1111/1758-5899.13252
+    meta: Global Policy · journal paper
+    desc: How Twitter shapes journalism and the visibility of journalists in the Global South.
+
+  - id: tcpd-ias
+    title: Bureaucrats of India (TCPD–IAS)
+    url: https://tcpd.ashoka.edu.in/bureaucrats-of-india/
+    meta: Trivedi Centre for Political Data · dataset
+    desc: A dataset on officers of the Indian Administrative Service.
+
+# Blog posts and articles.
+writing:
+  - id: bytes-speak-all-languages-cross-script-name-retrieval-via-contrastive-learning
+    title: "Bytes Speak All Languages: Cross-Script Name Retrieval via Contrastive Learning"
+    url: https://towardsdatascience.com/bytes-speak-all-languages-cross-script-name-retrieval-via-contrastive-learning/
+    source: Towards Data Science
+
+  - id: rl-with-actor-critic-methods
+    title: "Deep Reinforcement Learning: The Actor-Critic Method"
+    url: https://towardsdatascience.com/deep-reinforcement-learning-the-actor-critic-method/
+    source: Towards Data Science
+
+  - id: rl-with-policy-gradients
+    title: "Deep Reinforcement Learning: 0 to 100"
+    url: https://towardsdatascience.com/deep-reinforcement-learning-for-dummies/
+    source: Towards Data Science
+
+  - id: mamba-tutorial
+    title: "Mamba: SSM, Theory, and Implementation in Keras and TensorFlow"
+    url: https://towardsdatascience.com/mamba-ssm-theory-and-implementation-in-keras-and-tensorflow-32d6d4b32546
+    source: Towards Data Science
+
+  - id: class-conditioned-diffusion
+    title: Class-Conditioned Diffusion Models Using Keras and TensorFlow
+    url: https://medium.com/@vedantjumle/class-conditioned-diffusion-models-using-keras-and-tensorflow-9997fa6d958c
+    source: Medium
+
+  - id: diffusion-models
+    title: Image Generation with Diffusion Models Using Keras and TensorFlow
+    url: https://medium.com/@vedantjumle/image-generation-with-diffusion-models-using-keras-and-tensorflow-9f60aae72ac
+    source: Medium
+
+# Projects. `links` are the small links at the bottom right of each item;
+# add `external: true` to show the ↗ arrow (for links that leave the site).
+projects:
+  - id: seahorse-project
+    title: Seahorse
+    url: https://github.com/vedant-jumle/Seahorse
+    desc: "Code for giving a frozen language model a memory across sessions: activation steering as memory, stored slices of the model's own attention memory, and the experiments that show where each one breaks."
+    tags: [LLMs, activation steering, KV cache]
+    links:
+      - label: project page
+        url: seahorse/
+      - label: code
+        url: https://github.com/vedant-jumle/Seahorse
+        external: true
+
+  - id: cross-script-phonetic-retrieval
+    title: Cross-Script Phonetic Name Retrieval
+    url: https://github.com/vedant-jumle/cross-language-phonetic-text-alignment
+    desc: A byte-level transformer encoder, trained from scratch with contrastive learning, that matches person names across writing systems (Arabic, Russian, Chinese, Hebrew and more) without a tokenizer or pretrained backbone. 0.775 MRR and a 10× smaller script gap. TU Delft IR course project.
+    tags: [PyTorch, FAISS, contrastive learning, IR]
+    links:
+      - label: code
+        url: https://github.com/vedant-jumle/cross-language-phonetic-text-alignment
+        external: true
+
+  - id: image-stylization
+    title: SwinT-SRGAN with RoPE-2D
+    url: https://github.com/vedant-jumle/Image-Stylization
+    desc: Hybrid CNN and Swin Transformer super-resolution with 2D rotary position embeddings, so a model trained at one resolution can run at any size.
+    tags: [PyTorch, Swin Transformer, GAN]
+    links:
+      - label: code
+        url: https://github.com/vedant-jumle/Image-Stylization
+        external: true
+
+  - id: reinforcement-learning-101
+    title: Reinforcement Learning 101
+    url: https://github.com/vedant-jumle/reinforcement-learning-101
+    desc: An actively maintained guide to reinforcement learning concepts and algorithms, with code for each.
+    tags: [PyTorch, RL]
+    links:
+      - label: code
+        url: https://github.com/vedant-jumle/reinforcement-learning-101
+        external: true
+
+  - id: cosAE
+    title: "CosAE: Convolutional Harmonic Autoencoder"
+    url: https://github.com/vedant-jumle/CosAE
+    desc: A PyTorch implementation of the Convolutional Harmonic Autoencoder.
+    tags: [PyTorch]
+    links:
+      - label: code
+        url: https://github.com/vedant-jumle/CosAE
+        external: true
+
+  - id: buzztrends
+    title: BuzzTrends
+    url: https://buzztrends.in/
+    desc: An AI copilot for moment marketing that uses LLMs and vector search to write brand-specific social media posts.
+    tags: [LLMs, ChromaDB, Azure]
+    links:
+      - label: site
+        url: https://buzztrends.in/
+        external: true
+
+  - id: mamba-tf
+    title: Mamba in TensorFlow
+    url: https://medium.com/towards-data-science/mamba-ssm-theory-and-implementation-in-keras-and-tensorflow-32d6d4b32546
+    desc: A from-scratch implementation of the Mamba architecture in Keras and TensorFlow, with the theory behind it.
+    tags: [TensorFlow, Keras, SSMs]
+    links:
+      - label: article
+        url: https://medium.com/towards-data-science/mamba-ssm-theory-and-implementation-in-keras-and-tensorflow-32d6d4b32546
+        external: true
+
+  - id: diffusion-tf
+    title: Diffusion in TensorFlow
+    url: https://medium.com/@vedantjumle/image-generation-with-diffusion-models-using-keras-and-tensorflow-9f60aae72ac
+    desc: Custom DDPM and class-conditioned diffusion models built with Keras and TensorFlow.
+    tags: [TensorFlow, Keras, diffusion]
+    links:
+      - label: part 1
+        url: https://medium.com/@vedantjumle/image-generation-with-diffusion-models-using-keras-and-tensorflow-9f60aae72ac
+        external: true
+      - label: part 2
+        url: https://medium.com/@vedantjumle/class-conditioned-diffusion-models-using-keras-and-tensorflow-9997fa6d958c
+        external: true
+
+  - id: genie
+    title: "Genie: Generative Models in Flask"
+    url: https://github.com/maxDeCoder/gen_ML_sem_4/
+    desc: SRGAN, DCGAN and neural style transfer models served through a Flask app.
+    tags: [TensorFlow, Flask]
+    links:
+      - label: code
+        url: https://github.com/maxDeCoder/gen_ML_sem_4/
+        external: true
+
+  - id: twitter-disaster-watcher
+    title: Twitter Disaster Watcher
+    url: https://github.com/AkhileshManda/Hacknado
+    desc: A pipeline that pulls disaster-related information from tweets with a verifier and custom NER models.
+    tags: [NLP, NER, Twitter API]
+    links:
+      - label: code
+        url: https://github.com/AkhileshManda/Hacknado
+        external: true
+
+# Footer and structured data for search engines.
+contact:
+  email: vedantjumle@gmail.com
+  github: https://github.com/vedant-jumle
+  linkedin: https://www.linkedin.com/in/vedantjumle
+
+copyright_year: 2026

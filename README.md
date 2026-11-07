@@ -1,27 +1,9 @@
-# Vedant Jumle - Terminal-Style Personal Website
+# vedantjumle.com
 
-This is a simple, static terminal-style website for Vedant Jumle, AI researcher.
+Personal website of Vedant Jumle. Plain static HTML, hosted on GitHub Pages, no build step.
 
-## Getting Started
+- `index.html` — home page (about, research, writing, projects). Edit it directly to update content.
+- `seahorse/` — Seahorse project page and its three explainer pages.
+- `photo.jpg`, `og-image.png`, `cv.pdf` — assets.
 
-1. Open `index.html` in your web browser.
-2. To add or update content, edit `content.js`.
-3. Place your CV PDF named `cv.pdf` in the project root.
-4. Host it on GitHub Pages or any static hosting provider.
-
-## Commands
-
-| Command             | Description                                |
-|---------------------|--------------------------------------------|
-| `help`              | lists commands                             |
-| `ls [section]`      | lists top-level sections or items          |
-| `open <name>`       | opens a section or item                   |
-| `clear`             | clears the terminal output                 |
-
-## Sections
-
-- about  
-- cv     
-- projects
-- research
-- contact
+To preview locally: `python3 -m http.server` and open http://localhost:8000.
